@@ -15,4 +15,7 @@
 1. 复制一个 conda create -n conda-new --clone conda-old
 2. 删除旧的 conda remove -n conda-old --all
 
-### just a test for github
+## 21.06.12  
+### 线性回归(Linear Regression)  
+path: \linear_regression\linear_regression.ipynb  
+用均方误差(MSE)做Loss function，用定步长(学习率)的梯度下降法(Gradient descent)逼近线性函数。  
