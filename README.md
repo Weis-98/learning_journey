@@ -15,5 +15,4 @@
 1. 复制一个 conda create -n conda-new --clone conda-old
 2. 删除旧的 conda remove -n conda-old --all
 
-
 ### just a test for github
