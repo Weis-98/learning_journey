@@ -16,6 +16,8 @@
 2. 删除旧的 conda remove -n conda-old --all
 
 ### github网站下载上传代码速度太慢  
+```fatal: unable to access 'https://github.com/xxxx.git/': OpenSSL SSL_connect: Connection was reset in co nnection to github.com:443```
+有可能是因为github的IP地址更新了，手动更新即可。
 https://blog.csdn.net/z1026544682/article/details/86635367  
 
 ### jupyter上matplotlib的使用(结合官方文档食用)
