@@ -46,10 +46,10 @@ https://matplotlib.org/
    \end{cases}$$
    其中$\alpha$ 为学习率。
 5. ##### 特征缩放的原因
-   1. 回归系数直接受特征范围的影响，特征范围大的一般系数会比放缩后的更夸张，例子：对正规后的$x,y$, 分别取$x:y, 100x:100y$做线性回归，我们知道：$\theta_{100}=\theta_{norm}$，
+   1. 回归系数直接受特征范围的影响，特征范围大的一般系数会比放缩后的更夸张，例子：为了方便，我们假设$\theta_0 = 0$。对正规后的$x,y$, 分别取$x:y, 100x:100y$做线性回归，我们知道：$\theta_{100}=\theta_{norm}$，
        $\frac{\partial J_{norm}(\theta)}{\partial \theta} = \frac{1}{m}\sum_{i=1}^m(\theta^Tx^i-y^i)x^i.$，而  
        $\frac{\partial J_{100}(\theta)}{\partial \theta} = \frac{1}{m}\sum_{i=1}^m(100\theta^Tx^i-100y^i)100x^i = \frac{10^4}{m}\sum_{i=1}^m(\theta^Tx^i-y^i)x^i.$  
-       ！！！这意味着什么！意味着对同一起点$\theta$，$100x:100y$给出的梯度是标准化后的100倍！有很大的概率会跳过极小值点！在$J(\theta)$的函数图像上是“之”字形上升的。
+       ！！！这意味着什么！意味着对同一起点$\theta$，$100x:100y$给出的梯度是标准化后的10000倍！有很大的概率会跳过极小值点！在$J(\theta)$的函数图像上是“之”字形上升的。
    2. 具有较高比例的功能比具有较低比例的功能更重要；
    3. 如果我们具有缩放值，则可以轻松实现渐变下降；
    4. 如果按比例缩放，某些算法将减少执行时间；
@@ -71,7 +71,7 @@ https://matplotlib.org/
    $$ 
    \begin{aligned}
       g(z)=&\frac{1}{1+e^{-z}}\\
-   =&\frac{1}{1+e^{-\theta^{T}x}}
+   g(h_\theta(x))=&\frac{1}{1+e^{-\theta^{T}x}}
    \end{aligned}$$
 
 
