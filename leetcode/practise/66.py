@@ -17,3 +17,17 @@ class Solution:
             digits = [1] + digits
         return digits
 
+    def plusOne(self, digits: List[int]) -> List[int]:
+        """
+        适度优化
+        :param digits:
+        :return:
+        """
+        up = 1
+        for end in range(len(digits) - 1, -1, -1):
+            if digits[end] == 9:
+                digits[end] = 0
+            else:
+                digits[end] += 1
+                return digits
+        return [1] + digits
